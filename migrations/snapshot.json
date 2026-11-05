@@ -1,0 +1,144 @@
+{
+  "version": 1,
+  "tables": {
+    "jobs": {
+      "columns": {
+        "id": {
+          "type": "id",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "uid": {
+          "type": "varchar",
+          "length": 32,
+          "notNull": true
+        },
+        "hostId": {
+          "type": "refHost",
+          "notNull": true
+        },
+        "userId": {
+          "type": "varchar",
+          "length": 64,
+          "notNull": true
+        },
+        "kind": {
+          "type": "varchar",
+          "length": 16,
+          "notNull": true
+        },
+        "label": {
+          "type": "varchar",
+          "length": 200,
+          "notNull": true
+        },
+        "vmName": {
+          "type": "varchar",
+          "length": 128,
+          "notNull": true,
+          "defaultValue": ""
+        },
+        "status": {
+          "type": "varchar",
+          "length": 16,
+          "notNull": true,
+          "defaultValue": "running"
+        },
+        "phase": {
+          "type": "varchar",
+          "length": 32,
+          "notNull": true,
+          "defaultValue": ""
+        },
+        "percent": {
+          "type": "integer"
+        },
+        "log": {
+          "type": "text"
+        },
+        "error": {
+          "type": "text"
+        },
+        "startedAt": {
+          "type": "timestamp",
+          "notNull": true,
+          "defaultNow": true
+        },
+        "finishedAt": {
+          "type": "timestamp"
+        }
+      },
+      "indexes": [
+        {
+          "name": "idx_p_virtual_machines_jobs_uid",
+          "columns": [
+            "uid"
+          ],
+          "unique": true
+        },
+        {
+          "name": "idx_p_virtual_machines_jobs_host",
+          "columns": [
+            "hostId"
+          ]
+        },
+        {
+          "name": "idx_p_virtual_machines_jobs_status",
+          "columns": [
+            "status"
+          ]
+        }
+      ]
+    },
+    "watches": {
+      "columns": {
+        "id": {
+          "type": "id",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "userId": {
+          "type": "varchar",
+          "length": 64,
+          "notNull": true
+        },
+        "hostId": {
+          "type": "refHost",
+          "notNull": true
+        },
+        "uuid": {
+          "type": "varchar",
+          "length": 36,
+          "notNull": true
+        },
+        "name": {
+          "type": "varchar",
+          "length": 128,
+          "notNull": true
+        },
+        "createdAt": {
+          "type": "timestamp",
+          "notNull": true,
+          "defaultNow": true
+        }
+      },
+      "indexes": [
+        {
+          "name": "idx_p_virtual_machines_watches_vm",
+          "columns": [
+            "userId",
+            "hostId",
+            "uuid"
+          ],
+          "unique": true
+        },
+        {
+          "name": "idx_p_virtual_machines_watches_host",
+          "columns": [
+            "hostId"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@@status
+installed=1
+kvm=1
+service=1
+service=1
+pm=apt-get
+uefi=1
+connected=1
+@@version
+Compiled against library: libvirt 11.3.0
+Using library: libvirt 11.3.0
+Using API: QEMU 11.3.0
+Running hypervisor: QEMU 10.0.13
+Running against daemon: 11.3.0

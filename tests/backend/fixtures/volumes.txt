@@ -1,0 +1,4 @@
+ cirros.qcow2                        /var/lib/libvirt/images/cirros.qcow2                        file   112.00 MiB   20.69 MiB
+ fix-a.qcow2                         /var/lib/libvirt/images/fix-a.qcow2                         file   112.00 MiB   325.64 MiB
+ fix-b.qcow2                         /var/lib/libvirt/images/fix-b.qcow2                         file   112.00 MiB   20.69 MiB
+ termix-image-dede0465f0a9eb5c.img   /var/lib/libvirt/images/termix-image-dede0465f0a9eb5c.img   file   112.00 MiB   20.69 MiB

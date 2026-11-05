@@ -1,0 +1,212 @@
+@@stats
+Domain: 'fixture-a'
+  state.state=1
+  state.reason=1
+  cpu.time=7463174000
+  cpu.user=6089736000
+  cpu.system=1373438000
+  cpu.cache.monitor.count=0
+  cpu.haltpoll.success.time=6956498
+  cpu.haltpoll.fail.time=4276710
+  balloon.current=262144
+  balloon.maximum=262144
+  balloon.swap_in=0
+  balloon.swap_out=0
+  balloon.major_fault=0
+  balloon.minor_fault=0
+  balloon.unused=148928
+  balloon.available=198660
+  balloon.usable=154844
+  balloon.last-update=1793908049
+  balloon.disk_caches=23288
+  balloon.hugetlb_pgalloc=0
+  balloon.hugetlb_pgfail=0
+  balloon.rss=234760
+  vcpu.current=1
+  vcpu.maximum=1
+  net.count=1
+  net.0.name=vnet10
+  net.0.rx.bytes=6827
+  net.0.rx.pkts=64
+  net.0.rx.errs=0
+  net.0.rx.drop=0
+  net.0.tx.bytes=2398
+  net.0.tx.pkts=31
+  net.0.tx.errs=0
+  net.0.tx.drop=0
+  block.count=1
+  block.0.name=vda
+  block.0.path=/var/lib/libvirt/images/fix-a.qcow2
+  block.0.backingIndex=1
+  block.0.rd.reqs=1124
+  block.0.rd.bytes=32435200
+  block.0.rd.times=101224672
+  block.0.wr.reqs=34
+  block.0.wr.bytes=278528
+  block.0.wr.times=12285282
+  block.0.fl.reqs=11
+  block.0.fl.times=24534500
+  block.0.allocation=341639168
+  block.0.capacity=117440512
+  block.0.physical=341463040
+@@info
+Id:             10
+Name:           fixture-a
+UUID:           a0807dfb-b54d-4620-a64a-26762c1df25a
+OS Type:        hvm
+State:          running
+CPU(s):         1
+CPU time:       7.5s
+Max memory:     262144 KiB
+Used memory:    262144 KiB
+Persistent:     yes
+Autostart:      disable
+Autostart Once: disable
+Managed save:   no
+Security model: apparmor
+Security DOI:   0
+Security label: libvirt-a0807dfb-b54d-4620-a64a-26762c1df25a (enforcing)
+@@xml
+<domain type='kvm' id='10'>
+  <name>fixture-a</name>
+  <uuid>a0807dfb-b54d-4620-a64a-26762c1df25a</uuid>
+  <memory unit='KiB'>262144</memory>
+  <currentMemory unit='KiB'>262144</currentMemory>
+  <vcpu placement='static'>1</vcpu>
+  <resource>
+    <partition>/machine</partition>
+  </resource>
+  <os>
+    <type arch='x86_64' machine='pc-q35-10.0'>hvm</type>
+    <boot dev='hd'/>
+  </os>
+  <features>
+    <acpi/>
+    <apic/>
+  </features>
+  <cpu mode='host-passthrough' check='none' migratable='on'/>
+  <clock offset='utc'/>
+  <on_poweroff>destroy</on_poweroff>
+  <on_reboot>restart</on_reboot>
+  <on_crash>destroy</on_crash>
+  <devices>
+    <emulator>/usr/bin/qemu-system-x86_64</emulator>
+    <disk type='file' device='disk'>
+      <driver name='qemu' type='qcow2'/>
+      <source file='/var/lib/libvirt/images/fix-a.qcow2' index='1'/>
+      <backingStore/>
+      <target dev='vda' bus='virtio'/>
+      <alias name='virtio-disk0'/>
+      <address type='pci' domain='0x0000' bus='0x04' slot='0x00' function='0x0'/>
+    </disk>
+    <controller type='usb' index='0' model='qemu-xhci'>
+      <alias name='usb'/>
+      <address type='pci' domain='0x0000' bus='0x02' slot='0x00' function='0x0'/>
+    </controller>
+    <controller type='sata' index='0'>
+      <alias name='ide'/>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x1f' function='0x2'/>
+    </controller>
+    <controller type='pci' index='0' model='pcie-root'>
+      <alias name='pcie.0'/>
+    </controller>
+    <controller type='pci' index='1' model='pcie-root-port'>
+      <model name='pcie-root-port'/>
+      <target chassis='1' port='0x10'/>
+      <alias name='pci.1'/>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x02' function='0x0' multifunction='on'/>
+    </controller>
+    <controller type='pci' index='2' model='pcie-root-port'>
+      <model name='pcie-root-port'/>
+      <target chassis='2' port='0x11'/>
+      <alias name='pci.2'/>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x02' function='0x1'/>
+    </controller>
+    <controller type='pci' index='3' model='pcie-root-port'>
+      <model name='pcie-root-port'/>
+      <target chassis='3' port='0x12'/>
+      <alias name='pci.3'/>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x02' function='0x2'/>
+    </controller>
+    <controller type='pci' index='4' model='pcie-root-port'>
+      <model name='pcie-root-port'/>
+      <target chassis='4' port='0x13'/>
+      <alias name='pci.4'/>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x02' function='0x3'/>
+    </controller>
+    <controller type='pci' index='5' model='pcie-root-port'>
+      <model name='pcie-root-port'/>
+      <target chassis='5' port='0x14'/>
+      <alias name='pci.5'/>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x02' function='0x4'/>
+    </controller>
+    <controller type='pci' index='6' model='pcie-root-port'>
+      <model name='pcie-root-port'/>
+      <target chassis='6' port='0x15'/>
+      <alias name='pci.6'/>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x02' function='0x5'/>
+    </controller>
+    <controller type='virtio-serial' index='0'>
+      <alias name='virtio-serial0'/>
+      <address type='pci' domain='0x0000' bus='0x03' slot='0x00' function='0x0'/>
+    </controller>
+    <interface type='network'>
+      <mac address='52:54:00:2f:07:c0'/>
+      <source network='default' portid='de534540-e265-449d-9880-864b7b4799af' bridge='virbr0'/>
+      <target dev='vnet10'/>
+      <model type='virtio'/>
+      <alias name='net0'/>
+      <address type='pci' domain='0x0000' bus='0x01' slot='0x00' function='0x0'/>
+    </interface>
+    <serial type='pty'>
+      <source path='/dev/pts/0'/>
+      <target type='isa-serial' port='0'>
+        <model name='isa-serial'/>
+      </target>
+      <alias name='serial0'/>
+    </serial>
+    <console type='pty' tty='/dev/pts/0'>
+      <source path='/dev/pts/0'/>
+      <target type='serial' port='0'/>
+      <alias name='serial0'/>
+    </console>
+    <channel type='unix'>
+      <source mode='bind' path='/run/libvirt/qemu/channel/10-fixture-a/org.qemu.guest_agent.0'/>
+      <target type='virtio' name='org.qemu.guest_agent.0' state='disconnected'/>
+      <alias name='channel0'/>
+      <address type='virtio-serial' controller='0' bus='0' port='1'/>
+    </channel>
+    <input type='mouse' bus='ps2'>
+      <alias name='input0'/>
+    </input>
+    <input type='keyboard' bus='ps2'>
+      <alias name='input1'/>
+    </input>
+    <graphics type='vnc' port='5900' autoport='yes' listen='127.0.0.1'>
+      <listen type='address' address='127.0.0.1'/>
+    </graphics>
+    <audio id='1' type='none'/>
+    <video>
+      <model type='virtio' heads='1' primary='yes'/>
+      <alias name='video0'/>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x01' function='0x0'/>
+    </video>
+    <watchdog model='itco' action='reset'>
+      <alias name='watchdog0'/>
+    </watchdog>
+    <memballoon model='virtio'>
+      <alias name='balloon0'/>
+      <address type='pci' domain='0x0000' bus='0x05' slot='0x00' function='0x0'/>
+    </memballoon>
+  </devices>
+  <seclabel type='dynamic' model='apparmor' relabel='yes'>
+    <label>libvirt-a0807dfb-b54d-4620-a64a-26762c1df25a</label>
+    <imagelabel>libvirt-a0807dfb-b54d-4620-a64a-26762c1df25a</imagelabel>
+  </seclabel>
+  <seclabel type='dynamic' model='dac' relabel='yes'>
+    <label>+64055:+64055</label>
+    <imagelabel>+64055:+64055</imagelabel>
+  </seclabel>
+</domain>
+@@ip
+ vnet10     52:54:00:2f:07:c0    ipv4         192.168.122.213/24

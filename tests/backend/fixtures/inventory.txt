@@ -1,0 +1,89 @@
+@@list
+a0807dfb-b54d-4620-a64a-26762c1df25a fixture-a
+c8e9f841-4d5f-4f69-b0ed-e51a1cd52441 fixture-b
+@@auto
+@@stats
+Domain: 'fixture-a'
+  state.state=1
+  state.reason=1
+  cpu.time=7458813000
+  cpu.user=6086177000
+  cpu.system=1372635000
+  cpu.cache.monitor.count=0
+  cpu.haltpoll.success.time=6956498
+  cpu.haltpoll.fail.time=4276710
+  balloon.current=262144
+  balloon.maximum=262144
+  balloon.swap_in=0
+  balloon.swap_out=0
+  balloon.major_fault=0
+  balloon.minor_fault=0
+  balloon.unused=148928
+  balloon.available=198660
+  balloon.usable=154844
+  balloon.last-update=1793908049
+  balloon.disk_caches=23288
+  balloon.hugetlb_pgalloc=0
+  balloon.hugetlb_pgfail=0
+  balloon.rss=234760
+  vcpu.current=1
+  vcpu.maximum=1
+  net.count=1
+  net.0.name=vnet10
+  net.0.rx.bytes=6827
+  net.0.rx.pkts=64
+  net.0.rx.errs=0
+  net.0.rx.drop=0
+  net.0.tx.bytes=2398
+  net.0.tx.pkts=31
+  net.0.tx.errs=0
+  net.0.tx.drop=0
+  block.count=1
+  block.0.name=vda
+  block.0.path=/var/lib/libvirt/images/fix-a.qcow2
+  block.0.backingIndex=1
+  block.0.rd.reqs=1124
+  block.0.rd.bytes=32435200
+  block.0.rd.times=101224672
+  block.0.wr.reqs=34
+  block.0.wr.bytes=278528
+  block.0.wr.times=12285282
+  block.0.fl.reqs=11
+  block.0.fl.times=24534500
+  block.0.allocation=341639168
+  block.0.capacity=117440512
+  block.0.physical=341463040
+
+Domain: 'fixture-b'
+  state.state=5
+  state.reason=0
+  cpu.time=1940000000
+  cpu.user=980000000
+  cpu.system=960000000
+  balloon.current=262144
+  balloon.maximum=262144
+  vcpu.current=1
+  vcpu.maximum=1
+  block.count=1
+  block.0.name=vda
+  block.0.path=/var/lib/libvirt/images/fix-b.qcow2
+  block.0.allocation=21692416
+  block.0.capacity=117440512
+  block.0.physical=21692416
+@@node
+CPU model:           x86_64
+CPU(s):              4
+CPU frequency:       2495 MHz
+CPU socket(s):       1
+Core(s) per socket:  4
+Thread(s) per core:  1
+NUMA cell(s):        1
+Memory size:         6070148 KiB
+total  :              6070148 KiB
+free   :               614656 KiB
+buffers:               110856 KiB
+cached :              2770256 KiB
+@@pools
+ default   running   yes   yes   98.22 GiB   14.57 GiB   83.65 GiB
+@@ip a0807dfb-b54d-4620-a64a-26762c1df25a
+ vnet10     52:54:00:2f:07:c0    ipv4         192.168.122.213/24
