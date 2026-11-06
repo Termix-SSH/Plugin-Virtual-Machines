@@ -1,13 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import {
-  ArrowLeft,
-  Bell,
-  BellOff,
-  Copy,
-  MonitorCog,
-  Skull,
-  Trash2,
-} from "lucide-react";
+import { Bell, BellOff, Copy, MonitorCog, Skull, Trash2 } from "lucide-react";
 import {
   useTranslation,
   type PluginHostRecord,
@@ -27,6 +19,8 @@ import {
   TileStack,
   TileWall,
   useConfirm,
+  ToolbarBand,
+  BackButton,
 } from "@termix-ssh/plugin-sdk/ui";
 import type { Inventory, VmDetail, VmRow } from "../shared/types";
 import {
@@ -147,17 +141,7 @@ export function VmDetailView({
   }, [isVisible, running, view, hostId, uuid, cpus]);
 
   const icon = <MonitorCog className="size-4" />;
-  const back = (
-    <Button
-      variant="ghost"
-      size="icon"
-      onClick={onBack}
-      title={t("vm.back")}
-      aria-label={t("vm.back")}
-    >
-      <ArrowLeft className="size-4" />
-    </Button>
-  );
+  const back = <BackButton onClick={onBack} label={t("vm.back")} />;
 
   if (!detail) {
     return (
@@ -290,7 +274,7 @@ export function VmDetailView({
           <p className="px-3 py-2 text-xs text-destructive">{failed}</p>
         )}
         {cloning && (
-          <div className="flex items-end gap-2 border-b border-border p-3">
+          <ToolbarBand className="items-end">
             <TextField
               label={t("vm.cloneName")}
               value={cloneName}
@@ -312,7 +296,7 @@ export function VmDetailView({
             <Button variant="ghost" onClick={() => setCloning(false)}>
               {t("common.cancel")}
             </Button>
-          </div>
+          </ToolbarBand>
         )}
         {deleting && (
           <div className="flex flex-col gap-2 border-b border-border p-3">
