@@ -32,6 +32,7 @@ Read the [docs](https://docs.termix.site/plugins/virtual-machines) to set it up 
 - Jobs that run on the host and survive a Termix restart
 - Alerts when a VM crashes or a pool fills up
 - A VM panel beside SSH terminals, a dashboard card and host page tiles
+- Termix actions for Operations Center, Automations, Fleets, the CLI and the assistant
 
 <br />
 
