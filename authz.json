@@ -1,0 +1,404 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Termix-SSH/Termix/main/scripts/authz/authz.schema.json",
+  "seed": [],
+  "routes": {
+    "POST /plugin-api/virtual-machines/hosts/:hostId/install": {
+      "access": "user",
+      "permission": "virtual-machines.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "destructive": true
+    },
+    "GET /plugin-api/virtual-machines/hosts/:hostId/inventory": {
+      "access": "user",
+      "permission": "virtual-machines.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      }
+    },
+    "GET /plugin-api/virtual-machines/hosts/:hostId/jobs": {
+      "access": "user",
+      "permission": "virtual-machines.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      }
+    },
+    "POST /plugin-api/virtual-machines/hosts/:hostId/jobs/:id/cancel": {
+      "access": "user",
+      "permission": "virtual-machines.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "destructive": true,
+      "allowed": "any",
+      "note": "Names a id on the host, which the test host does not have; host access is still checked"
+    },
+    "GET /plugin-api/virtual-machines/hosts/:hostId/networks": {
+      "access": "user",
+      "permission": "virtual-machines.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      }
+    },
+    "POST /plugin-api/virtual-machines/hosts/:hostId/networks": {
+      "access": "user",
+      "permission": "virtual-machines.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      }
+    },
+    "DELETE /plugin-api/virtual-machines/hosts/:hostId/networks/:name": {
+      "access": "user",
+      "permission": "virtual-machines.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "destructive": true,
+      "allowed": "any",
+      "note": "Names a name on the host, which the test host does not have; host access is still checked"
+    },
+    "POST /plugin-api/virtual-machines/hosts/:hostId/networks/:name/:action": {
+      "access": "user",
+      "permission": "virtual-machines.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "allowed": "any",
+      "note": "Names a name and action on the host, which the test host does not have; host access is still checked"
+    },
+    "GET /plugin-api/virtual-machines/hosts/:hostId/networks/:name/leases": {
+      "access": "user",
+      "permission": "virtual-machines.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "allowed": "any",
+      "note": "Names a name on the host, which the test host does not have; host access is still checked"
+    },
+    "POST /plugin-api/virtual-machines/hosts/:hostId/pools": {
+      "access": "user",
+      "permission": "virtual-machines.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      }
+    },
+    "DELETE /plugin-api/virtual-machines/hosts/:hostId/pools/:name": {
+      "access": "user",
+      "permission": "virtual-machines.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "destructive": true,
+      "allowed": "any",
+      "note": "Names a name on the host, which the test host does not have; host access is still checked"
+    },
+    "POST /plugin-api/virtual-machines/hosts/:hostId/pools/:name/:action": {
+      "access": "user",
+      "permission": "virtual-machines.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "allowed": "any",
+      "note": "Names a name and action on the host, which the test host does not have; host access is still checked"
+    },
+    "POST /plugin-api/virtual-machines/hosts/:hostId/pools/:name/download": {
+      "access": "user",
+      "permission": "virtual-machines.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "allowed": "any",
+      "note": "Names a name on the host, which the test host does not have; host access is still checked"
+    },
+    "GET /plugin-api/virtual-machines/hosts/:hostId/pools/:name/volumes": {
+      "access": "user",
+      "permission": "virtual-machines.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "allowed": "any",
+      "note": "Names a name on the host, which the test host does not have; host access is still checked"
+    },
+    "POST /plugin-api/virtual-machines/hosts/:hostId/pools/:name/volumes": {
+      "access": "user",
+      "permission": "virtual-machines.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "allowed": "any",
+      "note": "Names a name on the host, which the test host does not have; host access is still checked"
+    },
+    "DELETE /plugin-api/virtual-machines/hosts/:hostId/pools/:name/volumes/:volume": {
+      "access": "user",
+      "permission": "virtual-machines.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "destructive": true,
+      "allowed": "any",
+      "note": "Names a name and volume on the host, which the test host does not have; host access is still checked"
+    },
+    "GET /plugin-api/virtual-machines/hosts/:hostId/status": {
+      "access": "user",
+      "permission": "virtual-machines.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      }
+    },
+    "POST /plugin-api/virtual-machines/hosts/:hostId/vms": {
+      "access": "user",
+      "permission": "virtual-machines.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      }
+    },
+    "DELETE /plugin-api/virtual-machines/hosts/:hostId/vms/:uuid": {
+      "access": "user",
+      "permission": "virtual-machines.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "destructive": true,
+      "allowed": "any",
+      "note": "Names a uuid on the host, which the test host does not have; host access is still checked"
+    },
+    "GET /plugin-api/virtual-machines/hosts/:hostId/vms/:uuid": {
+      "access": "user",
+      "permission": "virtual-machines.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "allowed": "any",
+      "note": "Names a uuid on the host, which the test host does not have; host access is still checked"
+    },
+    "POST /plugin-api/virtual-machines/hosts/:hostId/vms/:uuid/autostart": {
+      "access": "user",
+      "permission": "virtual-machines.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "destructive": true,
+      "allowed": "any",
+      "note": "Names a uuid on the host, which the test host does not have; host access is still checked"
+    },
+    "POST /plugin-api/virtual-machines/hosts/:hostId/vms/:uuid/clone": {
+      "access": "user",
+      "permission": "virtual-machines.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "allowed": "any",
+      "note": "Names a uuid on the host, which the test host does not have; host access is still checked"
+    },
+    "POST /plugin-api/virtual-machines/hosts/:hostId/vms/:uuid/console": {
+      "access": "user",
+      "permission": ["virtual-machines.use", "virtual-machines.console"],
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "allowed": "any",
+      "note": "Names a uuid on the host, which the test host does not have; host access is still checked"
+    },
+    "POST /plugin-api/virtual-machines/hosts/:hostId/vms/:uuid/disks": {
+      "access": "user",
+      "permission": "virtual-machines.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "allowed": "any",
+      "note": "Names a uuid on the host, which the test host does not have; host access is still checked"
+    },
+    "DELETE /plugin-api/virtual-machines/hosts/:hostId/vms/:uuid/disks/:target": {
+      "access": "user",
+      "permission": "virtual-machines.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "destructive": true,
+      "allowed": "any",
+      "note": "Names a uuid and target on the host, which the test host does not have; host access is still checked"
+    },
+    "PATCH /plugin-api/virtual-machines/hosts/:hostId/vms/:uuid/hardware": {
+      "access": "user",
+      "permission": "virtual-machines.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "allowed": "any",
+      "note": "Names a uuid on the host, which the test host does not have; host access is still checked"
+    },
+    "POST /plugin-api/virtual-machines/hosts/:hostId/vms/:uuid/media": {
+      "access": "user",
+      "permission": "virtual-machines.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "allowed": "any",
+      "note": "Names a uuid on the host, which the test host does not have; host access is still checked"
+    },
+    "POST /plugin-api/virtual-machines/hosts/:hostId/vms/:uuid/nics": {
+      "access": "user",
+      "permission": "virtual-machines.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "allowed": "any",
+      "note": "Names a uuid on the host, which the test host does not have; host access is still checked"
+    },
+    "DELETE /plugin-api/virtual-machines/hosts/:hostId/vms/:uuid/nics/:mac": {
+      "access": "user",
+      "permission": "virtual-machines.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "destructive": true,
+      "allowed": "any",
+      "note": "Names a uuid and mac on the host, which the test host does not have; host access is still checked"
+    },
+    "POST /plugin-api/virtual-machines/hosts/:hostId/vms/:uuid/power/:action": {
+      "access": "user",
+      "permission": "virtual-machines.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "destructive": true,
+      "allowed": "any",
+      "note": "Names a uuid and action on the host, which the test host does not have; host access is still checked"
+    },
+    "GET /plugin-api/virtual-machines/hosts/:hostId/vms/:uuid/snapshots": {
+      "access": "user",
+      "permission": "virtual-machines.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "allowed": "any",
+      "note": "Names a uuid on the host, which the test host does not have; host access is still checked"
+    },
+    "POST /plugin-api/virtual-machines/hosts/:hostId/vms/:uuid/snapshots": {
+      "access": "user",
+      "permission": "virtual-machines.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "allowed": "any",
+      "note": "Names a uuid on the host, which the test host does not have; host access is still checked"
+    },
+    "DELETE /plugin-api/virtual-machines/hosts/:hostId/vms/:uuid/snapshots/:name": {
+      "access": "user",
+      "permission": "virtual-machines.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "destructive": true,
+      "allowed": "any",
+      "note": "Names a uuid and name on the host, which the test host does not have; host access is still checked"
+    },
+    "POST /plugin-api/virtual-machines/hosts/:hostId/vms/:uuid/snapshots/:name/revert": {
+      "access": "user",
+      "permission": "virtual-machines.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "allowed": "any",
+      "note": "Names a uuid and name on the host, which the test host does not have; host access is still checked"
+    },
+    "GET /plugin-api/virtual-machines/hosts/:hostId/vms/:uuid/stats": {
+      "access": "user",
+      "permission": "virtual-machines.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "allowed": "any",
+      "note": "Names a uuid on the host, which the test host does not have; host access is still checked"
+    },
+    "POST /plugin-api/virtual-machines/hosts/:hostId/vms/:uuid/use-vnc": {
+      "access": "user",
+      "permission": "virtual-machines.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "allowed": "any",
+      "note": "Names a uuid on the host, which the test host does not have; host access is still checked"
+    },
+    "PUT /plugin-api/virtual-machines/hosts/:hostId/vms/:uuid/watch": {
+      "access": "user",
+      "permission": "virtual-machines.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "allowed": "any",
+      "note": "Names a uuid on the host, which the test host does not have; host access is still checked"
+    },
+    "GET /plugin-api/virtual-machines/hosts/:hostId/vms/:uuid/xml": {
+      "access": "user",
+      "permission": "virtual-machines.use",
+      "resource": {
+        "kind": "host",
+        "min": "edit"
+      },
+      "allowed": "any",
+      "note": "Names a uuid on the host, which the test host does not have; host access is still checked"
+    },
+    "PUT /plugin-api/virtual-machines/hosts/:hostId/vms/:uuid/xml": {
+      "access": "user",
+      "permission": "virtual-machines.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "allowed": "any",
+      "note": "Names a uuid on the host, which the test host does not have; host access is still checked"
+    },
+    "GET /plugin-api/virtual-machines/images": {
+      "access": "user",
+      "permission": "virtual-machines.use"
+    },
+    "GET /plugin-api/virtual-machines/summary": {
+      "access": "user",
+      "permission": "virtual-machines.use"
+    },
+    "WS /plugin-ws/virtual-machines/console": {
+      "access": "user",
+      "permission": ["virtual-machines.use", "virtual-machines.console"],
+      "note": "Needs the console permission; the host is checked in the first message"
+    }
+  }
+}
