@@ -402,7 +402,7 @@ export function createJobs(
     startPolling() {
       if (polling) return;
       polling = true;
-      ctx.schedule.every(POLL_MS, () => tick(), { runNow: true });
+      ctx.schedule.every(POLL_MS, () => tick(), { id: "jobs", runNow: true });
     },
   };
 }

@@ -126,6 +126,7 @@ export class WatchChecker {
 
   start(): void {
     this.stopTimer = this.ctx.schedule.every(WATCH_TICK_MS, () => this.tick(), {
+      id: "watches",
       jitterMs: 5_000,
     });
   }

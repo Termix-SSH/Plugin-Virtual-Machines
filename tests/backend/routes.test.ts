@@ -30,6 +30,7 @@ async function start(
     "INSERT INTO users (id) VALUES ('user-1'); INSERT INTO ssh_data (id) VALUES (1), (2);",
   );
   const mock = createMockCtx({
+    sandbox: true,
     pluginId: manifest.id,
     manifest,
     capabilities: manifest.capabilities,
