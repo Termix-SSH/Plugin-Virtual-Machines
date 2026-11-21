@@ -180,6 +180,26 @@ describe(`${manifest.id} frontend`, () => {
     expect(screen.getByText(locales.vm.snapshots)).toBeTruthy();
   });
 
+  it("opens the VM a host tree asked for", async () => {
+    rendered = await renderWithApp(plugin, {
+      manifest,
+      locales,
+      api: api(),
+    });
+    rendered.renderTab("virtual-machines", {
+      isVisible: true,
+      host,
+      tab: {
+        id: "vm-1",
+        instanceId: "vm-1",
+        type: "virtual-machines",
+        label: "kvm",
+        data: { focus: { uuid: vm.uuid } },
+      },
+    });
+    expect(await screen.findByText(locales.vm.overview)).toBeTruthy();
+  });
+
   it("shows hosts on the dashboard card", async () => {
     rendered = await renderWithApp(plugin, {
       manifest,
